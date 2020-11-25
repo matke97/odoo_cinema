@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <record id="timetable_action" model="ir.actions.act_window">
+            <field name="name">Timetables</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cinema_management.timetable</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <!--<field name="view_id" ref="product_template_view_tree"/>-->
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                  Test12322
+                </p>
+            </field>
+    </record>
+
+    <menuitem id="timetable_menuitem" name="Timetable" parent="cinema_management_menu_root"  action="timetable_action" sequence = "2"/>
+</odoo>
