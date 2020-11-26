@@ -9,6 +9,7 @@ OPTIONS = [
 
 class Movie(models.Model):
     _name = "cinema_management.movie"
+    _description = "Movie"
 
     name         = fields.Char(required=True)
     genre        = fields.Selection(OPTIONS, default=OPTIONS[0][0])

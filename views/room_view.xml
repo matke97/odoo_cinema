@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="room_action" model="ir.actions.act_window">
+        <field name="name">Rooms</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">cinema_management.room</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                  Test12322
+                </p>
+        </field>
+    </record>
+
+    <menuitem id="room_menuitem" parent="cinema_management_menu_root" name="Rooms" action="room_action" sequence = "3"/>
+</odoo>
