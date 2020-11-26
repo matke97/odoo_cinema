@@ -10,7 +10,7 @@ OPTIONS = [
 class Movie(models.Model):
     _name = "cinema_management.movie"
     _description = "Movie"
-
+    _inherits = {}
     name         = fields.Char(required=True)
     genre        = fields.Selection(OPTIONS, default=OPTIONS[0][0])
     release_year = fields.Integer(required=True)
