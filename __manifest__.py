@@ -30,6 +30,7 @@
         'views/views.xml',
         'views/templates.xml',
         'views/movie_view.xml',
+        'views/sell_tickets_view.xml',
         'views/timetable_view.xml',
         'views/room_view.xml',
         'views/product_inherit_view.xml'

@@ -33,5 +33,6 @@
               id="cinema_product_inherit_menuitem"
               name = "Cinema Product"
               action="product_inherit_action"
-              sequence = "4" />
+               sequence = "4"
+              />
 </odoo>

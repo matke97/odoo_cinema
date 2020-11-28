@@ -13,5 +13,21 @@
         </field>
     </record>
 
-    <menuitem id="room_menuitem" parent="cinema_management_menu_root" name="Rooms" action="room_action" sequence = "3"/>
+    <record id="room_tree" model="ir.ui.view">
+        <field name="name">room.tree_view</field>
+        <field name="model">cinema_management.room</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id"/>
+                <field name="capacity"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <menuitem id="room_menuitem"
+              parent="cinema_management_menu_root"
+              name="Rooms"
+              action="room_action"
+              sequence = "3"/>
 </odoo>

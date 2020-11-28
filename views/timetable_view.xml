@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+
+    <record id="timetable_tree" model="ir.ui.view">
+        <field name="name">timetable.tree_view</field>
+        <field name="model">cinema_management.timetable</field>
+        <!--<field name="priority" eval="16"/>-->
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id"/>
+                <field name="date" string="Date of projection"/>
+                <field name="premiere" string="Is Premiere"/>
+                <field name="total_seats" string="Total seats"/>
+                <field name="sold_seats" string="Sold seats"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="timetable_form" model="ir.ui.view">
+        <field name="name">timetable.form_view</field>
+        <field name="model">cinema_management.timetable</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+
+                    <group >
+                        <field name="date"/>
+                        <field name="movie"/>
+                    </group>
+
+                    <group >
+                        <field name="premiere"/>
+                        <field name="room_id"/>
+                        <field name="sold_seats"/>
+                    </group>
+
+                </group>
+                <footer>
+                    <button  type="action" name="%(cinema_management.sell_tickets_action)d" string="Sell tickets" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+
+    <!--action window-->
      <record id="timetable_action" model="ir.actions.act_window">
             <field name="name">Timetables</field>
             <field name="type">ir.actions.act_window</field>
@@ -14,5 +60,9 @@
             </field>
     </record>
 
-    <menuitem id="timetable_menuitem" name="Timetable" parent="cinema_management_menu_root"  action="timetable_action" sequence = "2"/>
+    <menuitem id="timetable_menuitem"
+              name="Timetable"
+              parent="cinema_management_menu_root"
+              action="timetable_action"
+              sequence = "2"/>
 </odoo>

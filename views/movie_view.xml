@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!--<record id="movie_action" model="ir.actions.act_window">-->
-        <!--<field name="name">Movies_name</field>-->
-        <!--<field name="type">ir.actions.act_window</field>-->
-        <!--<field name="res_model">cinema_management.Movie</field>-->
-        <!--<field name="view_mode">tree, kanban, form</field>-->
-        <!--<field name="help" type ="html">-->
-            <!--<p class="o_view_nocontent_smiling_face">Movies</p>-->
-        <!--</field>-->
-    <!--</record>-->
 
 
     <record id="movie_action" model="ir.actions.act_window">
@@ -24,6 +15,23 @@
                 </p>
             </field>
     </record>
+
+
+
+    <record id="movie_tree" model="ir.ui.view">
+        <field name="name">movie.tree_view</field>
+        <field name="model">cinema_management.movie</field>
+        <!--<field name="priority" eval="16"/>-->
+         <field name="arch" type="xml">
+            <tree>
+                <field name="id"/>
+                <field name="name"/>
+                <field name="genre"/>
+                <field name="release_year"/>
+            </tree>
+        </field>
+    </record>
+
 
     <menuitem id="cinema_management_menu_root"
               name="Cinema Managment" />
