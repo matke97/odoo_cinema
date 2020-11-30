@@ -3,15 +3,14 @@
     'name': "cinema_management",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Module for cinema company managment""",
 
     'description': """
         Long description of module's purpose
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Milos Matic",
+    'website': "http://www.modoolar.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -20,13 +19,22 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base',
+                'product'
+                ],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
+        'security/security.xml',
         'views/views.xml',
         'views/templates.xml',
+        'views/movie_view.xml',
+        'views/sell_tickets_view.xml',
+        'views/timetable_view.xml',
+        'views/room_view.xml',
+        'views/product_inherit_view.xml'
+
     ],
     # only loaded in demonstration mode
     'demo': [

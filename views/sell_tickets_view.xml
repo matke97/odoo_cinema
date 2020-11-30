@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Sell tickets Wizard form view xml-->
+     <record id="sell_ticets_form" model="ir.ui.view">
+        <field name="name">sell_tickets_wizard.form_view</field>
+        <field name="model">cinema_management.sell_wizard</field>
+        <field name="arch" type="xml">
+            <form string="Sell tickets">
+                <group>
+                    <group>
+                        <field name="timetable_id" readonly="1"/>
+                        <field name="tickets"/>
+                        <field name="product_id"/>
+                        <field name="partner_id"/>
+                    </group>
+                    <footer>
+                        <button name="sell_submit" string="Submit" type="object" class="btn-primary"/>
+                        <button name="sell_cancel" string="Cancel" special="cancel" class="btn-secondary"/>
+                    </footer>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!--action window-->
+    <record id="sell_tickets_action" model="ir.actions.act_window">
+            <field name="name">Sell ticets</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cinema_management.sell_wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="sell_ticets_form"/>
+            <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,2 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_cinema_management_cinema_management,cinema_management.cinema_management,model_cinema_management_cinema_management,base.group_user,1,1,1,1
+access_cinema_user_movie,Restriction for Movie model to cinema user,model_cinema_management_movie,cinema_user,1,0,0,0
+access_cinema_user_timetable,Restriction for Timetable model to cinema user,model_cinema_management_timetable,cinema_user,1,0,0,0
+access_cinema_user_room,Restriction for Room model to cinema user,model_cinema_management_room,cinema_user,1,0,0,0
+access_cinema_manager_movie,Restriction for movie model to cinema moanger,model_cinema_management_movie,cinema_manager,1,1,1,0
+access_cinema_manager_timetable,Restriction for timetable model to cinema moanger,model_cinema_management_timetable,cinema_manager,1,1,1,0
+access_cinema_manager_room,Restriction for room model to cinema moanger,model_cinema_management_room,cinema_manager,1,1,1,0
+access_cinema_manager_sell_tickets,Restriction for room model to cinema moanger,model_cinema_management_sell_wizard,cinema_manager,1,1,1,1
