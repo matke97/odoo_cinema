@@ -14,7 +14,6 @@ class SellTickets(models.TransientModel):
     partner_id = fields.Many2one('res.partner', required=True)
     product_id = fields.Many2one('product.product', required=True, domain = [('eTicket', '=', 'True')])
 
-
     def sell_submit(self):
         if self.tickets <= self.timetable_id.remaining_seats:
             if self.tickets == 0:
@@ -35,11 +34,14 @@ class SellTickets(models.TransientModel):
                         'tax_ids'     : [pdv.id]
                 })]
             })
-            return {record}
+            return {
+                'type': 'ir.actions.act_url',
+                'url': '/web#id=%s&action=197&model=account.move&view_type=form&cids=&menu_id=102' % (record.id),
+                'target': 'self',
+                'res_id': record.id,
+            }
 
         else:
             raise exceptions.AccessDenied("Error. You try to reserve more seats that there are available")
         return {}
 
-    def sell_cancel(self):
-        return {}
