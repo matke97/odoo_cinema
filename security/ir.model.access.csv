@@ -5,3 +5,4 @@ access_cinema_user_room,Restriction for Room model to cinema user,model_cinema_m
 access_cinema_manager_movie,Restriction for movie model to cinema moanger,model_cinema_management_movie,cinema_manager,1,1,1,0
 access_cinema_manager_timetable,Restriction for timetable model to cinema moanger,model_cinema_management_timetable,cinema_manager,1,1,1,0
 access_cinema_manager_room,Restriction for room model to cinema moanger,model_cinema_management_room,cinema_manager,1,1,1,0
+access_cinema_manager_sell_tickets,Restriction for room model to cinema moanger,model_cinema_management_sell_wizard,cinema_manager,1,1,1,1
