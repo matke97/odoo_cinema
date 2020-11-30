@@ -19,6 +19,7 @@
         <field name="name">Product</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">product.product</field>
+        <field name="domain">[('eTicket', '=', 'True')]</field>
         <field name="view_mode">kanban,tree,form</field>
         <field name="context" eval="{'eTicket' : True}"/>
             <!--<field name="view_id" ref="product_template_view_tree"/>-->
